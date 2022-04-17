@@ -6,17 +6,18 @@
 
 nomes = []
 idades = []
-#sexo = []'''
+#sexo = []
 
 maioridade = 0
 menordevinte = 0
 homem_mais_velho = 0
 
-for c in range(1, 3):
-    nome = str(input('Digite o {} nome: '.format(c)))
-    idade = int(input('Digite a {} idade: '.format(c)))
+for c in range(1, 5):
+    print('-' * 5,'{} PESSOA '.format(c), '-' * 5)
+    nome = str(input('Nome: '))
+    idade = int(input('Idade: '))
     idades.append(idade)
-    sex = str(input('Digite o sexo da {} pessoa (M) masculino ou (F) feminino: '.format(c))).upper()
+    sex = str(input('Sexo [M/F]: ')).upper()
     #sexo.append(sex)
     if idade < 20 and sex == 'F':
         menordevinte += 1
@@ -30,6 +31,6 @@ media = sum(idades) / len(idades)
 '''print(nomes)
 print(idades)
 print(sexo)'''
-print('\nA media de todas as idades é {:.0f}'.format(media))
-print('temos {} mulher(es) com menos de vinte anos e são: {}.'.format(menordevinte, junto))
+print('\nA media de todas as idades é {:.1f}'.format(media))
+print('temos {} mulher(es) com menos 20 anos e são: {}.'.format(menordevinte, junto))
 print('O homem mais velho é {} com {} anos'.format(homem_mais_velho, maioridade))
