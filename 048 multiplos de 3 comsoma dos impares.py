@@ -1,4 +1,7 @@
-#048 - Multiplos de 3 impares
+#Exercício Python 48: Faça um programa que calcule a soma entre
+# todos os números que são múltiplos de
+# três e que se encontram no intervalo de 1 até 500.
+
 soma = 0 # Variavel para a soma dos valores
 cont = 0 # Variavel para a contagem da repetição
 
