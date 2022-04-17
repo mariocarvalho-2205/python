@@ -14,7 +14,9 @@ listamenor = []
 
 for c in range(1, 8):
     nasc = int(input('Em que ano a {} pessoa nasceu?  '.format(c)))
-    if (atual - nasc) >= 21:
+    idade = atual - nasc # usando variavel para achar a idade.
+    #if (atual - nasc) >= 21:  - sem usar variavel idade.
+    if idade >= 21:
         maior += 1
         listamaior.append(nasc)
     else:
