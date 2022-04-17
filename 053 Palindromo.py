@@ -1,6 +1,7 @@
 # Crie um programa que leia uma frase qualquer e diga se ela é um palíndromo,
 # desconsiderando os espaços. Exemplos de palíndromos:
 
+# primeiro modo
 frase = str(input('Digite uma frase: ')).upper().strip()
 palavras = frase.split()
 junto = ''.join(palavras)
@@ -11,6 +12,7 @@ if inverso == junto:
 else:
     print('A frase digitada NÃO É UM PALINDROMO.')
 
+# segundo modo usando modulo
 ''''#import unidecode
 #Biblioteca unidecode serve para converter as palavras para outro encode e remover espaços
 frase1 = str(input('Digite uma frase para ver se ela é Palindromo. ')).upper().strip()
@@ -22,6 +24,7 @@ if espaco[0: ] == espaco[::-1]:
 else:
     print('A frase {} não é um PALINDROMO.'.format(frase1))'''
 
+# terceiro modo usando for
 '''frase = str(input('Dgite uma frase: ')).strip().upper()
 palavras = frase.split()
 junto = ''.join(palavras)
