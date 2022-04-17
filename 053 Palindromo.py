@@ -4,7 +4,7 @@
 frase = str(input('Digite uma frase: ')).upper().strip()
 palavras = frase.split()
 junto = ''.join(palavras)
-inverso = junto[::-1]
+inverso = junto[::-1] # usando o fatiamento começando pelo final
 print('O inverso de {} e {}'.format(junto, inverso))
 if inverso == junto:
     print('Temos um Palindromo.')
