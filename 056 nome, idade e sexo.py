@@ -14,10 +14,10 @@ homem_mais_velho = 0
 
 for c in range(1, 5):
     print('-' * 5,'{} PESSOA '.format(c), '-' * 5)
-    nome = str(input('Nome: '))
+    nome = str(input('Nome: ')).strip().capitalize()
     idade = int(input('Idade: '))
     idades.append(idade)
-    sex = str(input('Sexo [M/F]: ')).upper()
+    sex = str(input('Sexo [M/F]: ')).upper().strip()
     #sexo.append(sex)
     if idade < 20 and sex == 'F':
         menordevinte += 1
