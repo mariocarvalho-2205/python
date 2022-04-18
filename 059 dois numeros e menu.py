@@ -6,3 +6,13 @@
 [5] sair do programa
 Seu programa deverá realizar a operação solicitada em cada caso.'''
 
+num1 = int(input('Digite o 1 valor: '))
+num2 = int(input('Digite o 2 valor: '))
+opcao = ''
+while opcao != '5':
+    opcao = str(input('''escolha o que deseja fazer:
+             [] Somar
+             [] Multiplicar
+             [] Maior
+             [] Novos Numeros
+             [] Sair do Programa'''))
