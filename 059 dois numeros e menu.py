@@ -11,8 +11,8 @@ num2 = int(input('Digite o 2 valor: '))
 opcao = ''
 while opcao != '5':
     opcao = str(input('''Escolha o que deseja fazer:
- [] Somar
- [] Multiplicar
- [] Maior
- [] Novos Numeros
- [] Sair do Programa: '''))
+ [1] Somar
+ [2] Multiplicar
+ [3] Maior
+ [4] Novos Numeros
+ [5] Sair do Programa: '''))
