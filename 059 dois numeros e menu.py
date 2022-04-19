@@ -5,7 +5,7 @@
 [4] novos numeros
 [5] sair do programa
 Seu programa deverá realizar a operação solicitada em cada caso.'''
-
+from time import sleep
 num1 = int(input('Digite o 1 valor: '))
 num2 = int(input('Digite o 2 valor: '))
 opcao = 0
@@ -18,6 +18,8 @@ while opcao != 5:
 [4] Novos Numeros
 [5] Sair do Programa:
 Digite sua opção: '''))
+  print('Processando....')
+  sleep(1)
   if opcao == 1:
     soma = num1 + num2
     print('Opção 1 - O resultado da soma entre {} + {} é {}'.format(num1, num2, soma))
@@ -40,4 +42,6 @@ Digite sua opção: '''))
     print('O programa será finalizado.')
   else:
     print('Digite uma opção valida.')
+print('Finalizando....')
+sleep(1)
 print('Fim do programa. Volte Sempre!!')
