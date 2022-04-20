@@ -8,7 +8,7 @@ f = factorial(num)
 print('O fatorail de {} é {}'.format(num, factorial(int(num))))'''
 
 # Segunda forma
-n = int(input('Digite um numero para calcular o seu Fatorial: '))
+'''n = int(input('Digite um numero para calcular o seu Fatorial: '))
 c = n
 f = 1
 print('Calculando {}! ='.format(n), end=' ')
@@ -17,4 +17,16 @@ while c > 0:
     print(' x ' if c > 1 else ' = ', end='') # usando condicional dentro de um print.
     f *= c
     c -= 1
-print('{}'.format(f))
+print('{}'.format(f))'''
+n = int(input('Digite um numero para calcular o Fatorial:'))
+c = n
+f = 1
+laco = n + 1
+print('Calculando {}!'.format(n), end=' ')
+for i in range(f , laco):
+
+    print(' x ' if i > 1 else '= ', end='')
+    print('{}'.format(c), end='')
+    f *= c
+    c -= 1
+print(f' = {f}')
