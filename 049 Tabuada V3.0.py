@@ -8,7 +8,7 @@ operador = str(input('''Digite o operador desejado.
     (S) - Subtração
     (M) - Multiplicação
     (D) - Divisão
-    Digite sua escolha: ''')).upper()
+    Digite sua mais: ''')).upper()
 
 for c in range(1, 11): # é preciso começar pelo 1 e terminar no 11,
                        # assim fica com o inicio e fim correto.

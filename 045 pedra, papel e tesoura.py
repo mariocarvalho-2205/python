@@ -6,8 +6,8 @@ print('+-' * 4, 'Pedra, Papel e Tesoura', '+-' * 4)
 print('{:*^40}'.format(' JOKENPO '))
 print('+-' * 20)
 itens = ('Pedra', 'Papel', 'Tesoura') # Criação de uma lista com as opções.
-#Variavel computador para escolha aleatoria.
-computador = int(random.randint(0, 2)) # Opção para escolha aleatoria iportando biblioteca
+#Variavel computador para mais aleatoria.
+computador = int(random.randint(0, 2)) # Opção para mais aleatoria iportando biblioteca
 print('''Sua opções:
 [ 0 ]: Pedra
 [ 1 ]: papel
