@@ -8,7 +8,6 @@ while continuar == 'S':
     num = int(input('Digite um numero: '))
     total += num
     cont += 1
-
     if cont == 1: # Sempre que o contador for igual a 1, prosegue a condicional
         maior = menor = num # atribuindo valor da variavel num as variaveis maior e menor.
     else: # Aqui verifica a condicional de maior e menor
