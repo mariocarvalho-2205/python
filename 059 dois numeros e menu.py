@@ -10,7 +10,8 @@ num1 = int(input('Digite o 1 valor: '))
 num2 = int(input('Digite o 2 valor: '))
 opcao = 0
 
-while opcao != 5:
+while opcao != 5: # O laço verifica o valor digitado na var-opção.
+  # Var-opção recebe valor inserido pelo usuario.
   opcao = int(input('''\nEscolha o que deseja fazer:
 [1] Somar
 [2] Multiplicar
