@@ -3,9 +3,11 @@
 # advinhar até acertar, mostrando no final quantos palpites
 # foram necessarios.
 
+# from random import randint -> Aqui importamos apenas a função necessaria.
 import random
 import time
-
+# computador = randint(0, 10) -> # Dessa forma usamos a função abreviada
+                                 # com a importação especifica.
 computador = random.randint(0, 10)
 print('-_-' * 20)
 print('Sou seu computador... Acabei de pensar em um numero entre 0 e 10. ')
@@ -13,14 +15,14 @@ print('Será que você consegue advinhar?')
 print('-_-' * 20)
 acertou = False # A variavel recebe valor booleano negativo
 palpite = 0
-while not acertou: # Aqui o laço verifica se booleano é verdadeiro.
+while not acertou: # Aqui o laço verifica se booleano é verdadeiro e repete enquanto for falso.
     jogador = int(input('Em que numero eu pensei? '))
     print('Hummm...')
     palpite += 1
     time.sleep(0.5)
     if jogador == computador:
         acertou = True # Se a condição entre jogador e computador for verdadeira,
-                       # A variavel acertou, recebe booleano verdadeiro.
+                       # A variavel acertou, recebe booleano verdadeiro e encerra o laço.
     else:
         if jogador < computador:
             print('Mais... Tente mais uma vez')
