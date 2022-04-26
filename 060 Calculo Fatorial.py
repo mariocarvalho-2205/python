@@ -5,10 +5,10 @@
 '''from math import factorial
 num = int(input('Digite um numero para calcular o seu Fatorial: '))
 f = factorial(num)
-print('O fatorail de {} é {}'.format(num, factorial(int(num))))'''
+print('O fatorial de {} é {}'.format(num, factorial(int(num))))'''
 
-# Segunda forma
-'''n = int(input('Digite um numero para calcular o seu Fatorial: '))
+# Segunda forma usando while
+n = int(input('Digite um numero para calcular o seu Fatorial: '))
 c = n
 f = 1
 print('Calculando {}! ='.format(n), end=' ')
@@ -17,8 +17,10 @@ while c > 0:
     print(' x ' if c > 1 else ' = ', end='') # usando condicional dentro de um print.
     f *= c
     c -= 1
-print('{}'.format(f))'''
-n = int(input('Digite um numero para calcular o Fatorial:'))
+print('{}'.format(f))
+
+# forma usando for.
+'''n = int(input('Digite um numero para calcular o Fatorial:'))
 c = n
 f = 1
 laco = n + 1
@@ -29,4 +31,4 @@ for i in range(f , laco):
     print('{}'.format(c), end='')
     f *= c
     c -= 1
-print(f' = {f}')
+print(f' = {f}')'''
