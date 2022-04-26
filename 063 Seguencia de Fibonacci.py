@@ -3,16 +3,16 @@
 
 
 termos = int(input('Digite quantos numeros da sequencia você quer vê? '))
-f1 = 0
-f2 = 1
-prox = 0
+f1 = 0 # A var F1 recebe 0 que é o inicio da sequencia de Fibonacci
+f2 = 1 # A var F2 recebe 1 que é o valor do segundo termo.
+f3 = 0 # A var F3 começa com 0, e receberá a soma das vars F1 e F2,
+       # para continuar a sequencia.
 i = 1
-while i <= termos:
+while i <= termos: # O contador irá repetir a quantidade de termos desejada.
     print('{}'.format(f1), end=' -> ')
-    prox = f1 + f2
+    f3 = f1 + f2
     f2 = f1
-    f1 = prox
-
+    f1 = f3
     i += 1
 print('Fim!!!')
 #print('Sequencia finalizada com {} elementos.'.format(i - 1))
