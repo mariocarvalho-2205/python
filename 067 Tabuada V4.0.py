@@ -5,7 +5,7 @@ print('-*' * 20)
 while True:
     print('-' * 40)
     n = int(input('Quer ver a tabuada de qual valor? '))
-    if n <= 0:
+    if n < 0:
         break
     op = str(input('''Qual operador voce quer usar? 
 [+]Somar 
