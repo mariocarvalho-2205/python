@@ -22,7 +22,11 @@ while True:
         elif op == '*':
             print(f'{n:2}  x {c:2} = {n * c:2}')
         elif op == '/':
-            print(f'{n * c:2}  / {n:2}  = {(n * c) / n:.0f}')
+            if n > 0:
+                print(f'{n * c:2}  / {n:2}  = {(n * c) / n:.0f}')
+            else:
+                print('Zero não é divisivel:')
+                break
         c += 1
 print('O programa encerrou porque foi digitado um valor negativo.')
 
