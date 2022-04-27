@@ -2,7 +2,7 @@
 # O jogo só será interrompido quando o jogador perder,
 # mostrando o total de vitorias consecutivas que ele conquistou no final do jogo.
 
-import random
+from random import choice
 
 print('*' * 10)
 print('Par ou Impar?')
@@ -10,7 +10,7 @@ print('Vamos ver se você acerta? ')
 print('*' * 10)
 
 lista = ['PAR', 'IMPAR']
-computador = random.choice(lista)
+computador = choice(lista)
 
 jogador = ''
 cont = 0
