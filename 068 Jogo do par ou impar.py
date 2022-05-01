@@ -44,7 +44,7 @@ while True:
 '''
 
 
-'''from random imprt choice
+'''from random import choice
 
 print('*' * 10)
 print('VAMOS JOGAR PAR OU IMPAR ')
