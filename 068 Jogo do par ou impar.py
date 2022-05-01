@@ -4,44 +4,38 @@
 # minha versão pelo que entendi no enunciado.
 
 from random import randint
-
+print('*' * 25)
 print('VAMOS JOGAR PAR OU IMPAR?')
-print('*' * 20)
+print('*' * 25)
 computador = randint(1, 10)
-
-
 cont = 0
-# precisa corrigir o laço. Não está dando o looping e a condição esta errada.
-# ganha quando o resto da soma do computador com o num_jogador der a opção escolhida
-# pelo jogador
+vitorias = 0
 while True:
-    num_jogador = int(input('diga um valor: '))
+    num_jogador = int(input('Diga um valor: '))
     opc_jogador = str(input('Par ou Impar [P/I] ')).upper().strip()[0]
     total = num_jogador + computador
-    soma = num_jogador + computador
-    #impar = total % 2 == 1
-    if num_jogador != computador:
-        if total % 2 == 0:
-            print(f'Você jogou {num_jogador} e o computador jogou {computador}. total de {soma} Deu par!')
-            print('Você perdeu!')
-        if total % 2 == 1:
-            print(f'Você jogou {num_jogador} e o computador jogou {computador}. total de {soma} Deu Impar!')
-            print('Você perdeu!')
+    cont += 1
+    if total % 2 == 0 and opc_jogador == 'P':
+        print(f'Você jogou \033[32m{num_jogador}\033[m e o computador jogou {computador}. total de {total}, Deu Par!')
+        print('\033[36mVocê Ganhou!\033[m')
+        vitorias += 1
+    elif total % 2 == 1 and opc_jogador == 'I':
+        print(f'Você jogou \033[33m{num_jogador}\033[m e o computador jogou {computador}. total de {total}, Deu Impar!')
+        print('\033[36mVocê Ganhou!\033[m')
+        vitorias += 1
+    elif total % 2 == 0 and opc_jogador == 'I':
+        print(f'Você jogou \033[34m{num_jogador}\033[m e o computador jogou {computador}. total de {total}, Deu Par!')
+        print(f'\033[31mVocê Perdeu! Eu ganhei com {cont} tentativas.\033[m')
+        print('')
         break
-    else:
-        if total % 2 == 0:
-            print(f'Você jogou {num_jogador} e o computador jogou {computador}. total de {soma} Deu par!')
-            print('Você Ganhou!')
-        if total % 2 == 1:
-            print(f'Você jogou {num_jogador} e o computador jogou {computador}. total de {soma} Deu Impar!')
-            print('Você Ganhou!')
+    elif total % 2 == 1 and opc_jogador == 'P':
+        print(f'Você jogou \033[35m{num_jogador}\033[m e o computador jogou {computador}. total de {total}, Deu Impar!')
+        print(f'\033[31mVocê Perdeu! Eu ganhei com {cont} tentativa.\033[m')
+        break
     print('Vamos jogar novamente...')
-
-# Essa versão esta dando certo
-    '''else:
-        print(f'Você jogou {num_jogador} e o computador {computador}. Total de {total} Deu par!!')
-        print(f'Você jogou {num_jogador} e o computador {computador}. Total de {total} Deu Impar!!')
-'''
+    print('_-*' * 10)
+print('_-' * 15)
+print(f'GAME OVER! Você venceu {vitorias} vezes.')
 
 
 '''from random import choice
