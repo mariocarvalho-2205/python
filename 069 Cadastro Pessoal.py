@@ -10,14 +10,13 @@ print('-' * 20)
 print('Cadastre uma pessoa')
 print('-' * 20)
 continuar = ''
-idade = 0
-maior_18 = 0
-menos_20 = 0
-homens = 0
+idade = maior_18 = menos_20 = homens = 0
+
 while True:
     idade = int(input('IDADE: '))
-    sexo = str(input('Sexo: [M/F] ')).upper().strip()[0]
-    while sexo != 'M' and sexo != 'F':
+    sexo = ' '
+
+    while sexo not in 'MF':
         sexo = str(input('Sexo: [M/F] ')).upper().strip()[0]
     if idade > 18:
         maior_18 += 1
@@ -26,8 +25,10 @@ while True:
     if sexo == 'F' and idade < 20:
         menos_20 += 1
     print('-' * 20)
-    continuar = str(input('Quer continuar? [S/N] ')).upper().strip()[0]
-    print('-' * 20)
+    continuar = ' '
+    while continuar not in 'SN':
+        continuar = str(input('Quer continuar? [S/N] ')).upper().strip()[0]
+        print('-' * 20)
     if continuar == 'N':
         break
 print('_-' * 20)
