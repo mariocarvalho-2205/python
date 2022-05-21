@@ -9,7 +9,10 @@ num = (int(input('Digite um numero: ')),
        int(input('Digite mais um numero: ')),
        int(input('Digite o ultimo numero: ')),)
 print(f'Você digitou os valores {num}')
-print(f'O valor 9 apareceu {num.count(9)} vezes')
+if 9 in num:
+    print(f'O valor 9 apareceu {num.count(9)} vezes')
+else:
+    print('O numero 9 não foi digitado.')
 if 3 in num:
     print(f'O valor 3 apareceu na {num.index(3) + 1} posição')
 else:
