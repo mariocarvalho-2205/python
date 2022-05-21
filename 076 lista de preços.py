@@ -6,6 +6,8 @@ organizando os dados em forma tabular.
 
 lista_produtos = (['Pao', 0.50], ['Cebola', 1.00], ['Açucar', 4.75], ['Feijão', 7.89], ['Arroz', 6.99])
 print('-' * 38)
+print('{:x^38}'.format(' MS Mercadinho '))
+print('-' * 38)
 total = 0
 for produto, preço in lista_produtos:
     print(f'{produto:.<30}R$  {preço:3.2f}')
