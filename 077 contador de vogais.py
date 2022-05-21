@@ -4,7 +4,7 @@ vogais
 '''
 
 palavras = ('aprender', 'programar', 'linguagem',
-            'python', 'cruso', 'gratis', 'estudar',
+            'python', 'curso', 'gratis', 'estudar',
             'praticar', 'trabalhar', 'mercado','programador', 'futuro')
 cont = 0
 for c in range(len(palavras)):
@@ -13,3 +13,9 @@ for c in range(len(palavras)):
         if vogal == 'a' or vogal == 'e' or vogal == 'i' or vogal == 'o' or vogal == 'u':
             print(f'{vogal}', end=' ')
     cont += 1
+# Correção:
+for p in palavras:
+    print(f'\nNa palavra {p.upper()} temos ', end=' ')
+    for letra in p:
+        if letra.lower() in 'aeiou': # Se quiser pegar os acentos tem que colocar na string do if 'aáãâ'
+            print(letra, end=' ')
