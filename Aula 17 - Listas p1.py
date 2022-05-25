@@ -69,7 +69,24 @@ else:
 for v in lista_remover:
      print(f'{v}...', end='')
 
+#lista3.append('Tenorio')
+#lista3.insert(3, 'adilma')
+
 for c, v in enumerate(lista3):
     print(f'\nNa posição {c} encontrei o valor {v}',end='')
 print('\nCheguei ao final da lista')
 
+'''valores = list()
+for cont in range(0, 5):
+    valores.append(int(input('Digite um valor: ')))
+print(valores)
+'''
+a = [1, 2, 3, 8, 95, 65, 21, 54]
+# b = a # Dessa forma será criada uma ligação entre as duas lista
+        # Sendo assim, toda alteração feita na segunda lista, afetará a segunda.
+b = a[:] # dessa forma, é criada uma copia dos valores da primeira lista,
+         # podendo alterar os valores apenas na segunda lista
+         # Se não fizer dessa forma, o python faz uma ligação
+b[3] = 150
+print(f'Lista A tem {a}')
+print(f'Lista B tem {b}')
