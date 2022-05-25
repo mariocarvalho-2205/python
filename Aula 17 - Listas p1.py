@@ -32,7 +32,7 @@ lista.append('tesoura') # adiciona item na ultima posição da lista
 print(lista)
 
 lista.insert(1, 'celular') # adiciona item na posição
-                           # desejada nome_lista.insert(posição_escolhida, 'item')
+lista.insert(6, 90)        # desejada nome_lista.insert(posição_escolhida, 'item')
 print(lista)
 
 #Apagando itens na lista
@@ -58,3 +58,18 @@ print(lista3)
 # colocando em ordem reversa
 lista3.sort(reverse=True)
 print(lista3)
+lista_remover = [1, 2, 3, 4, 2, 3, 7 ,8 ,2, 2]
+print(f'lista remove {lista_remover}')
+
+while 2 in lista_remover:
+    lista_remover.remove(2)
+    print(f'lista remove sem numero 2 {lista_remover:}')
+else:
+    print(f'Acabaram os dois da lista {lista_remover}')
+for v in lista_remover:
+     print(f'{v}...', end='')
+
+for c, v in enumerate(lista3):
+    print(f'\nNa posição {c} encontrei o valor {v}',end='')
+print('\nCheguei ao final da lista')
+
