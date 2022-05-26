@@ -16,5 +16,6 @@ while True:
     continua = str(input('Quer continuar? [S/N] ')).upper().strip()[0]
     if continua == 'N':
         break
+lista.sort()
 print(f'{"=-"*15}')
-print('Você digitou os valores {}'.format(lista))
+print(f'Você digitou os valores {lista}')
