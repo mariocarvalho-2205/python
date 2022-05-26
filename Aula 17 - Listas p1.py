@@ -58,7 +58,7 @@ print(lista3)
 # colocando em ordem reversa
 lista3.sort(reverse=True)
 print(lista3)
-lista_remover = [1, 2, 3, 4, 2, 3, 7 ,8 ,2, 2]
+lista_remover = [1, 2, 3, 4, 2, 3, 7, 8, 2, 2]
 print(f'lista remove {lista_remover}')
 
 while 2 in lista_remover:
