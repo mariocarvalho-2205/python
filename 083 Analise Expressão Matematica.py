@@ -2,13 +2,36 @@
 083 - Crie um programa onde o usuario digite uma expressão qualquer
 que use parenteses.
 Seu aplicativo deverá analisar se a expressão passada está com os
-parenteses abertos o fechados na ordem correta.
+parenteses abertos e fechados na ordem correta.
 '''
 exp = str(input('Digite a expressão: '))
-print('A expressão está correta' if exp.count('(') == exp.count(')')
+pilha = []
+for simb in exp:
+    if simb == '(':
+        pilha.append('(')
+    elif simb == ')':
+        if len(pilha) > 0:
+            pilha.pop()
+        else:
+            pilha.append(')')
+            break
+if len(pilha) == 0:
+    print('Sua expressão é valida!!')
+else:
+    print('Sua expressão está errada!!')
+
+
+
+
+
+
+
+'''print('A expressão está correta' if exp.count('(') == exp.count(')')
          else 'Sua expressão está errada!!')
 
 if exp.count('(') == exp.count(')'):
     print('Sua expressão está correta!!!')
 else:
-    print('Sua expressão está errada!!!')
+    print('Sua expressão está errada!!!')'''
+
+
