@@ -6,14 +6,14 @@ parenteses abertos e fechados na ordem correta.
 '''
 exp = str(input('Digite a expressão: '))
 pilha = []
-for simb in exp:
-    if simb == '(':
-        pilha.append('(')
-    elif simb == ')':
-        if len(pilha) > 0:
-            pilha.pop()
+for simb in exp:                            # Verifica cada item da string
+    if simb == '(':                         # Se tiver o parentese abrindo
+        pilha.append('(')                   # Sera adicionado na lista pilha
+    elif simb == ')':                       # Verifica se existe parentese fechando
+        if len(pilha) > 0:                  # Verifica se tiver item na lista pilha
+            pilha.pop()                # Se tiver pilha estiver cheia, será removido um item
         else:
-            pilha.append(')')
+            pilha.append(')')          # para cada parentese abrindo sera removido um parentese
             break
 if len(pilha) == 0:
     print('Sua expressão é valida!!')
