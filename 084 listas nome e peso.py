@@ -6,11 +6,13 @@ B-)Uma listagem com as pessoas mais pessadas
 C-)Uma listagem com as pessoas mais leves
 '''
 pessoas = list()
+dados = list()
 totpessoas = maispeso = menospeso = 0
 
 while True:
-    pessoas.append(str(input('Nome: ')))
-    pessoas.append(float(input('Peso: ')))
+    dados.append(str(input('Nome: ')))
+    dados.append(float(input('Peso: ')))
+    pessoas.append(dados[:])
     continuar = str(input('Quer continar? [S/N]: ')).strip().upper()
     if continuar in 'N':
         break
