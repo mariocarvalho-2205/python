@@ -41,12 +41,4 @@ print(f'\nO menor peso foi de {menor}kg. Peso de ', end='')
 for p in principal:
     if p[1] == menor:
         print(f'{p[0].capitalize()}.', end=' ')
-
-
-
-
-
-
-
-
 print('\nPrograma Finalizado com Sucesso!!!')
