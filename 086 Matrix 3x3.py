@@ -7,10 +7,10 @@ matriz = []
 for i in range(0, 3):
     linha = []
     for j in range(0, 3):
-        linha.append(int(input('Digite um numero: ')))
+        linha.append(int(input(f'Digite um numero para a posição [{i}, {j}]: ')))
     matriz.append(linha)
 print(matriz)
 for linha in range(len(matriz)):
     for coluna in range(len(matriz)):
-        print(f'{matriz[linha][coluna]:^3}', end=' ')
+        print(f'[{matriz[linha][coluna]:^3}]', end=' ')
     print()
