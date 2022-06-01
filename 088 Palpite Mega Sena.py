@@ -20,7 +20,7 @@ for c in range(0, jogos):
 print('-=' * 3, f'sorteando {jogos} jogos!'.upper(), '-=' * 3)
 for j in range(len(palipte)):
     print(f'Jogo {j + 1}: {palipte[j]}')
-    time.sleep(0.5)
+    time.sleep(0.8)
 print('-=' * 4, f'{"< boa sorte! >":^3}'.upper(), '-=' * 4)
 
 
