@@ -19,16 +19,23 @@ while True:
 print(ficha)
 print('-=' * 30)
 print(f'{"No":<5}{"Nome":<10}{"Media":>9}')
+# Pode ser usado as duas opçoes de laço.
 for c in range(len(ficha)):
     print(f'{c:<4} {ficha[c][0]:<10} {ficha[c][2]:>8}')
+print('-=' * 30)
+for i, a in enumerate(ficha):
+    print(f'{i:<4}{a[0]:<10}{a[2]:>8.1f}')
 
+print('-' * 30)
 while True:
+    print('-' * 30)
     resp2 = int(input('Mostrar notas de qual aluno? (999 interrompe): '))
-    if resp2 <= len(ficha):
-        print(f'As notas da {ficha[int(resp2)][0]} são {ficha[int(resp2)][1]}')
+    if resp2 <= len(ficha) - 1:
+        print(f'As notas da {ficha[resp2][0]} são {ficha[resp2][1]}')
     elif resp2 != 999:
         print('Opção invalida!!')
     if resp2 == 999:
+        print('Finalizado com Sucesso!')
         break
-print('Finalizado com Sucesso!')
+
 
