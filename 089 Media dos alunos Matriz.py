@@ -30,7 +30,7 @@ print('-' * 30)
 while True:
     print('-' * 30)
     resp2 = int(input('Mostrar notas de qual aluno? (999 interrompe): '))
-    if resp2 <= len(ficha) - 1:
+    if resp2 <= len(ficha) - 1: # com o -1 no final do len ele so pega a quantidade correta.
         print(f'As notas da {ficha[resp2][0]} são {ficha[resp2][1]}')
     elif resp2 != 999:
         print('Opção invalida!!')
