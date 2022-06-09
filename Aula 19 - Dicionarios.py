@@ -24,3 +24,32 @@ dados = {
 dados['sobrenome'] = 'tenorio'
 del dados['sexo']
 print(dados)
+
+filme = {
+    'titulo': 'Star Wars',
+    'ano': '1977',
+    'diretor': 'George Lucas'
+}
+print()
+print(filme['titulo'])
+print(filme.values()) # imprime os valores que contem no dicionario (dados)
+print()
+print(filme.keys()) # imprime as chaves que contem no dicionario (titulos dos dados)
+print(filme.items()) # imprime cada item (titulo + dados) em forma de tupla
+
+for chaves, valores in filme.items(): # keys e values
+    print(f'O {chaves} é {valores}.')
+
+locadora = [
+    {'titulo': 'Star Wars',
+    'ano': '1977',
+    'diretor': 'George Lucas'},
+    {'titulo': 'sonic',
+     'ano': '2019',
+    'diretor': 'não sei'},
+    {'titulo': 'home de ferro',
+    'ano': '2015',
+    'diretor': 'tambem nao sei'}
+]
+for k in range(0, len(locadora)):
+    print(f'O filme {locadora[k]["titulo"]} foi feito em {locadora[k]["ano"]}')
