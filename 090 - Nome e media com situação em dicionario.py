@@ -18,6 +18,6 @@ print('-=' * 30)
 for k, v in aluno.items():
     print(f'\t{k.capitalize()} é igual a {v}')
 
-print(f'\tNome é igual a {aluno["nome"]}')
-print(f'\tMédia é igual a {aluno["media"]}')
-print(f'\tSituação é igual a {aluno["situacao"]}')
+#  print(f'\tNome é igual a {aluno["nome"]}')
+#  print(f'\tMédia é igual a {aluno["media"]}')
+#  print(f'\tSituação é igual a {aluno["situacao"]}')
