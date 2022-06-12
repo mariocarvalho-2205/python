@@ -5,3 +5,4 @@ Depois vai ler a quantidade de gols feitos em cada partida.
 No final, tudo isso será guardado em um dicionario, incluindo o total de gols feitos
 durante o campeonato.
 '''
+dados = dict()
