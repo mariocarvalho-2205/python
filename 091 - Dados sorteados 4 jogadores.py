@@ -19,8 +19,7 @@ for i, c in enumerate(sorted(jogadores, key=jogadores.get, reverse=True)):
     print(f'\tO {i + 1}o lugar foi o {c} com {jogadores[c]}')
     sleep(.8)
 
-# segunda versão
-
+# segunda versão com 6 jogadores
 jogadores2 = {'Jogador 1': randint(1, 6), 'Jogador 2': randint(1, 6),
               'Jogador 3': randint(1, 6), 'Jogador 4': randint(1, 6),
               'Jogador 5': randint(1, 6), 'Jogador 6': randint(1, 6)}
