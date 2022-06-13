@@ -7,16 +7,24 @@ B-) A media de idade do grupo
 C-) Uma lista com todas as mulheres
 D-) Uma lista com todas as pessoas com idade acima da media.
 '''
-dados = dict()
 cadastro = list()
+dados = dict()
 while True:
+    dados.clear()  # É preciso esvaziar o dicionario antes de coletar novos dados.
     dados['Nome'] = str(input('Nome: ')).capitalize().strip()
-    dados['Sexo'] = str(input('Sexo? [M/F]: ')).upper().strip()
+    while True:
+        dados['Sexo'] = str(input('Sexo? [M/F]: ')).upper().strip()[0]
+        if dados['Sexo'] in 'MF':
+            break
+        print('ERRO! Por favor digite apenas M ou F.')
     dados['Idade'] = int(input('Idade? '))
-    cont = str(input('Quer continuar? [S/N]: ')).upper().strip()
-    cadastro.append(dados)
-    dados.clear()
-    if cont == 'N':
+    cadastro.append(dados.copy())  # É necessario adicionar os dados a
+    # lista no final do laço.
+    while True:
+        resp = str(input('Quer continuar? [S/N]: ')).upper().strip()[0]
+        if resp in 'SN':
+            break
+        print('ERRO! Por favor digite S ou N.')
+    if resp == 'N':
         break
-print(dados)
 print(cadastro)
