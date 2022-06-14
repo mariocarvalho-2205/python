@@ -9,7 +9,7 @@ D-) Uma lista com todas as pessoas com idade acima da media.
 '''
 cadastro = list()
 dados = dict()
-mulheres = list()
+
 soma = media = 0
 while True:
     dados.clear()  # É preciso esvaziar o dicionario antes de coletar novos dados.
