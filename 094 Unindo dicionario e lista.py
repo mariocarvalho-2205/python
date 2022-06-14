@@ -41,7 +41,7 @@ for p in cadastro:  # Variavel p varre a lista em busca da chave['Sexo']
 print()
 print(f'D-) Lista das pessoas que estão acima da media: ')
 for p in cadastro:  # Variavel p varre a lista em busca da chave['Idade']
-    if p['Idade'] >= media:
+    if p['Idade'] >= media:  # Condicional para verificar Idade acima da media.
         print('     ', end='')
         for k, v in p.items():  # Laço para varrer os dados da lista
             print(f'{k} = {v}; ', end='')
