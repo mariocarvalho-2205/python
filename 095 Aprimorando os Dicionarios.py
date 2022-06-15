@@ -12,7 +12,7 @@ while True:
     partidas = int(input(f'Quantas partidas {dados["Nome"]} jogou? '))
     for i in range(0, partidas):
         gols.append(int(input(f'Quantos gols na {i + 1}a partida? ')))
-        dados['Gols'] = gols
+    dados['Gols'] = gols[:]  # Não pode esquecer de criar copia usando o [:]
     dados['Total'] = sum(gols)
     jogadores.append(dados.copy())
     while True:
@@ -22,14 +22,35 @@ while True:
         print('ERRO! Por favor digite S ou N')
     if resp == 'N':
         break
+    print('-' * 40)
+print('-=' * 25)
+#print(f'{"Cod":<4}  {"Nome":<10}   {"Gols":<10}   {"Total":<5}')
+print(f'{"Cod":<7} ', end='')
+for i in dados.keys():
+    print(f'{i:<15}', end='')
+print()
+print('-' * 50)
+for k, v in enumerate(jogadores):
+    print(f'{k:<8}', end='')
+    for d in v.values():
+        print(f'{str(d):<15}', end='')
+    print()
+print('-' * 50)
+while True:
+    busca = int(input('Mostrar os dados de qual jogador? (999 para parar) '))
+    print('-' * 50)
+    if busca == 999:
+        print('\t\t\tFINALIZADO COM SUCESSO!!')
+        break
+    if busca >= len(jogadores):
+        print(f'\tERRO! Não existe jogador com codigo {busca}!')
+        print('-' * 50)
+    else:
+        print(f'\t -- LEVANTAMENTO DO JOGADOR {jogadores[busca]["Nome"]}:')
+        print(f'\t\tCom um total de {jogadores[busca]["Total"]} gols. ')
+        for k, v in enumerate(jogadores[busca]["Gols"]):
+            print(f'\t\tNo jogo {k + 1} ele fez {v} gols.')
+        print('-' * 50)
+print('\t\t\t\t<< VOLTE SEMPRE >>')
 
-print('-=' * 20)
-print(jogadores)
-print(f'{"Cod":<4}  {"Nome":<10}   {"Gols":<10}   {"Total":<5}')
-for k, v in dados.items():
-    print(f'O campo {k} tem o valor {v}.')
-print('-=' * 20)
-print(f'O jogador {dados["Nome"]} jogou {partidas} partidas.')
-for k, v in enumerate(gols):
-    print(f'\t=> Na {k + 1}a partida, fez {v} gols.')
-print(f'Fez um total de {dados["Total"]} gols.')
+
