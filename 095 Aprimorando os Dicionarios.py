@@ -43,7 +43,7 @@ while True:
         print('\t\t\tFINALIZADO COM SUCESSO!!')
         break
     if busca >= len(jogadores):
-        print(f'\tERRO! Não existe jogador com codigo {busca}!')
+        print(f'\t\033[34mERRO! Não existe jogador com codigo {busca}!\033[m')
         print('-' * 50)
     else:
         print(f'\t -- LEVANTAMENTO DO JOGADOR {jogadores[busca]["Nome"]}:')
