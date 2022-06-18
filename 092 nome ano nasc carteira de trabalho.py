@@ -6,7 +6,7 @@ alem da idade, com quantos anos a pessoa vai se aposentar.
 '''
 from datetime import datetime
 dados = dict()
-dados['Nome'] = str(input('Nome: ')).capitalize().strip()
+dados['Nome'] = str(input('Nome: ')).strip().title()
 nasc = int(input('Ano de Nascimento: '))
 dados['Idade'] = datetime.now().year - nasc
 dados['CTPS'] = int(input('Carteira de Trabalho (0 não tem): '))
