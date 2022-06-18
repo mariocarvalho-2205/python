@@ -24,18 +24,20 @@ while True:
         break
     print('-' * 40)
 print('-=' * 25)
-#print(f'{"Cod":<4}  {"Nome":<10}   {"Gols":<10}   {"Total":<5}')
-print(f'{"Cod":<7} ', end='')
+
+#  print(f'{"Cod":<4}  {"Nome":<10}   {"Gols":<10}   {"Total":<5}')
+
+print(f'\033[33m{"Cod":<7} ', end='')  # O cod: não está dentro do dicionario.
 for i in dados.keys():
     print(f'{i:<15}', end='')
 print()
-print('-' * 50)
+print('\033[m-' * 50)
 for k, v in enumerate(jogadores):
-    print(f'{k:<8}', end='')
+    print(f'\033[34m{k:<8}', end='')
     for d in v.values():
         print(f'{str(d):<15}', end='')
     print()
-print('-' * 50)
+print('\033[m-' * 50)
 while True:
     busca = int(input('Mostrar os dados de qual jogador? (999 para parar) '))
     print('-' * 50)
@@ -46,11 +48,11 @@ while True:
         print(f'\t\033[34mERRO! Não existe jogador com codigo {busca}!\033[m')
         print('-' * 50)
     else:
-        print(f'\t -- LEVANTAMENTO DO JOGADOR {jogadores[busca]["Nome"]}:')
+        print(f'\t -- LEVANTAMENTO DO JOGADOR {jogadores[busca]["Nome"].upper()} --')
         print(f'\t\tCom um total de {jogadores[busca]["Total"]} gols. ')
         for k, v in enumerate(jogadores[busca]["Gols"]):
-            print(f'\t\tNo jogo {k + 1} ele fez {v} gols.')
+            print(f'\t\tNo {k + 1}o jogo ele fez {v} gols.')
         print('-' * 50)
-print('\t\t\t\t<< VOLTE SEMPRE >>')
+print('\t\t\t\t\033[35m<< VOLTE SEMPRE >>\033[m')
 
 
