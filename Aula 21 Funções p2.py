@@ -59,3 +59,13 @@ soma(2)
 
 
 # Escopo de variavel
+def teste(b):
+    b += 4
+    c = 2
+    print(f'A variavel n(GLOBAL) tem o valor {a}')
+    print(f'A variavel x(LOCAL) vale {b}')
+    print(f'C vale ')
+
+
+a = 5
+b = 4
