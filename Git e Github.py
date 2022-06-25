@@ -1,8 +1,17 @@
 '''
 Git e Github
+Configuração inicial git:
+git config --global user.name "nome"
+git config --global user.email "email@com.br"
+git config --list - testa as configurações
+
+git config --global --unset user.name "nome" # descadastra o nome e email das configurações
+
+cls no cmd / clear no git: Limpa a tela
 
 Comandos basicos:
 1-) dir ou ls: É usado para listar as pastas e arquivos que contem no diretorio.
+ls -a: mostra arquivos ocultos
 
 2-) cd : é usado para acessar pastas e diretorios.
 ex: cd /d/pasta/pasta\ com\ espaco/
@@ -32,6 +41,24 @@ rmdir + nome da pasta /S /Q: apaga a pasta com tudo dentro
 # no git: rm -rf nome da pasta: apaga a pasta com arquivos dentro
 rm nome do arquivo: apaga o arquivo dentro da pasta
 
+6-) git add *: pega tudo que foi modificado e adiciona ao staged
+git add .: manda tudo
+git add nome do arquivo, envia somente o arquivo modificado
 
-6-) cls no cmd / clear no git: Limpa a tela
+7-) git commit -m "texto do commit" serve para informar a
+modificação feita no arquivo
+
+8-) git status: monitora o que está acontecendo nos arquivos
+
+# Configurando repositorio no github e sincronizando.
+git remote add origin + link do repositorio no github #para
+
+git remot -v # mostra a lista com o endereço para onde serao enviadas as alterações
+dos repositorios cadastrados
+
+git push origin master # vai mandar o repositorio local para o repositorio na nuvem
+
+git pull origin master # Vai puxar o repositorio na nuvem para o local
+
+git clone + link # para clonar o repositorio completo
 '''
