@@ -113,4 +113,20 @@ f1 = fatorial(5)
 f2 = fatorial(4)
 f3 = fatorial()
 print(f'Os resultados sao {f1}, {f2} e {f3}')
+print()
+
+
+def par(n = 0):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+
+
+n = int(input(f'Digite um numero: '))
+
+if par(n):
+    print('É par!!')
+else:
+    print('Não é par!!!')
 
