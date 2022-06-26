@@ -34,7 +34,7 @@ def contador(i, f, p):
     """
     c = i
     while c <= f:
-        print(Fore.RED + f'{c}', end=Fore.BLUE + '..')
+        print(Fore.RED + f'{c}', end=Fore.BLUE + '....')
         c += p
     print(Fore.GREEN + 'FIM!!')
 
@@ -48,6 +48,8 @@ help(contador)
 # a variavel passa a receber valor zero 0.
 
 
+
+
 def soma(a, b=0, c=0):
     s = a + b + c
     print(f'A soma vale {s, a}.')
@@ -58,14 +60,57 @@ soma(2, 3)
 soma(2)
 
 
+def funcao():
+    n1 = 4
+    print(f'N1 dentro vale {n1}')
+
+
+n1 = 2
+funcao()
+print(f'N1 fora vale {n1}')
+
+
 # Escopo de variavel
+# Escopo local
 def teste(b):
+    #global a
+    a = 8
     b += 4
     c = 2
-    print(f'A variavel n(GLOBAL) tem o valor {a}')
-    print(f'A variavel x(LOCAL) vale {b}')
-    print(f'C vale ')
+    print(f'A dentro vale {a}')
+    print(f'b dentro vale {b}')
+    print(f'C dentro vale {c}')
 
 
-a = 5
-b = 4
+# Escopo global
+a = 5  # Variavel global
+teste(a)
+print(f'A fora vale {a}')
+
+def soma1(a, b=0, c=0):
+    s = a + b + c
+    print(f'A soma vale {s}.')
+    return s
+
+
+n1 = soma1(3, 2, 5)
+n2 = soma1(2, 2)
+n3 = soma1(6)
+
+print(f'Meus calculos deram {n1}, {n2} e {n3}')
+
+
+def fatorial(num=1):
+    f = 1
+    for c in range(num, 0, -1):
+        f *= c
+    return f
+
+
+n = int(input('Digite um numero fatorial: '))
+print(f'O fatorial de {n} é ig1ual a {fatorial(n)}')
+f1 = fatorial(5)
+f2 = fatorial(4)
+f3 = fatorial()
+print(f'Os resultados sao {f1}, {f2} e {f3}')
+
