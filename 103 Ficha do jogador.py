@@ -7,7 +7,7 @@ mesmo que algum dado não tenha sido informado corretamente.
 
 
 def ficha(jogador='<desconhecido>', gol=0):
-    print(f'O jogador {jogador} fez {gol} gols na rodade.')
+    print(f'O jogador {jogador} fez {gol} gols na rodada.')
 
 
 nome = str(input('Nome do Jogador: '))
