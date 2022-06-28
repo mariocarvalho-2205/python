@@ -8,10 +8,10 @@ fatorial.
 
 def fatorial(n, show=False):
     '''
-    >= Faz o calculo fatorial do numero escolhido.
-    :param n: Variavel recebe o numero digitado pelo usuario.
-    :param show: True> exibe o calculo do fatorial. False> exibe apenas o resultado.
-    :return: retora a função com o resultado.
+    -> Calcula o fatoria de um numero.
+    :param n: O numero a ser calculado.
+    :param show: (Opcional). Mostrar ou não a conta.
+    :return: retora o fatorial de um numero n.
     '''
     f = 1
     print(f'Calculando {n}! = ', end='')
