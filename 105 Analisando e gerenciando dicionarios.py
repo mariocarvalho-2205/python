@@ -8,9 +8,6 @@ dicionário com as seguintes informações:
 – A média da turma
 – A situação (opcional)
 '''
-from colorama import init, Fore, Back
-init(autoreset=True)
-
 
 def notas(*n, sit=False):
     '''
